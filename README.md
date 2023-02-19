@@ -21,9 +21,9 @@ pip install -r requirements.txt
 
 3. Run the program
 ```sh
-python3 src/keylogger.py  # for Linux/macOS
+python3 core/keylogger.py  # for Linux/macOS
 
-py src/keylogger.py       # for Windows
+py core/keylogger.py       # for Windows
 ```
 
 ## Usage
