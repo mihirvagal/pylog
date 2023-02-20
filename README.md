@@ -1,5 +1,7 @@
 # PyLog
 
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge&logo=appveyor)](http://choosealicense.com/licenses/mit/)
+
 This is a simple keylogger written in Python that captures and logs every keystroke typed on the keyboard. The program runs in the background and saves the logged data in a text file. It can be used for educational purposes or as a tool for monitoring computer usage.
 
 ## Requirements
