@@ -5,7 +5,6 @@ This is a simple keylogger written in Python that captures and logs every keystr
 ## Requirements
 
 - Python 3.x
-    - pynput
 
 ## Getting started
 
