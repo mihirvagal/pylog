@@ -1,6 +1,7 @@
 import pynput
 from pynput.keyboard import Key, Listener
-import datetime, time
+import datetime
+import time
 
 unix_time = int(time.mktime(datetime.datetime.now().timetuple()))
 
