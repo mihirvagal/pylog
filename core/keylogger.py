@@ -28,8 +28,8 @@ def write_file(keys):
     """Save the keystrokes to a textfile.
 
     Args:
-        keys (list): List of all the keystrokes (size=10) by the user from the start of the program 
-                     which is later transferd to a file to be stored persistently. This "extra-steps" 
+        keys (list): List of all the keystrokes (size=10) by the user from the start of the program
+                     which is later transferd to a file to be stored persistently. This "extra-steps"
                      are performed to reduce lag.
     """
     with open(f"log_{unix_time}.txt", "a") as file:
@@ -43,7 +43,7 @@ def write_file(keys):
 
 def on_release(key):
     """Kill the program on hitting the `Esc` button.
-    
+
     Args:
         key (string): Record recent key.
     """
