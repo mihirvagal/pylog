@@ -7,6 +7,7 @@ This is a simple keylogger written in Python that captures and logs every keystr
 ## Requirements
 
 - Python 3.x
+- Poetry
 
 ## Getting started
 
@@ -17,14 +18,12 @@ git clone https://github.com/mihirvagal/pylog.git
 
 2. Install the requirements
 ```sh
-pip install -r requirements.txt
+poetry install
 ```
 
 3. Run the program
 ```sh
-python3 core/keylogger.py  # for Linux/macOS
-
-py core/keylogger.py       # for Windows
+poetry run python core/keylogger.py
 ```
 
 ## Usage
