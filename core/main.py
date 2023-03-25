@@ -23,7 +23,7 @@ class KeystrokeRecorder:
         """
         self.keys.append(key)
         self.count += 1
-        logging.info(f'pressed :key: "{key}"')
+        logging.info(f"pressed :key: \"{key}\"")
 
         if self.count >= 10:
             self.count = 0
@@ -37,9 +37,9 @@ class KeystrokeRecorder:
             if k == "space":
                 logging.info("")
             elif k.startswith("Key"):
-                logging.info(f"pressed :key: \"{k.split('.')[1]}\"")
+                logging.info(f"pressed :key: \"{k.split(".")[1]}\"")
             else:
-                logging.info(f'pressed :key: "{k}"')
+                logging.info(f"pressed :key: \"{k}\"")
 
     def on_release(self, key):
         """Kill the program on hitting the `Esc` button.
