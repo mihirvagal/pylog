@@ -11,7 +11,6 @@ class KeystrokeRecorder:
         self.count, self.keys = 0, []
         logging.basicConfig(
             filename=f"log_{self.unix_time}.txt",
-            level=logging.DEBUG,
             format="%(message)s",
         )
 
